@@ -40,7 +40,10 @@ public class StudentController {
 		return studentService.getByRegistrationNumber(registrationNumber);
 	}
 	
-	
+	@GetMapping(value = "/findAllByStream")
+	public List<StudentEntity> getAllByStream(@RequestParam String stream){
+		return studentService.getAllByStream(stream);
+	}
 	
 
 }

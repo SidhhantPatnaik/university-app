@@ -32,6 +32,11 @@ public class StudentService {
 		StudentEntity dbStudent = studentRepository.findByRegistrationNumber(registrationNumber);
 		return dbStudent;
 	}
+
+	public List<StudentEntity> getAllByStream(String stream) {
+		return studentRepository.findAllByStream(stream);
+		
+	}
 	
 	
 	
